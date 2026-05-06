@@ -23,9 +23,16 @@ Descripcion breve
 
 ## Caracteristicas
 
-- 1
-- 2
-- 3
+- Inventario de productos conectado a una API backend desplegada en Vercel.
+- Listado de productos en tabla con nombre, precio y categoria.
+- Consumo de datos desde el frontend mediante `fetch` contra `/api/products`.
+- API REST con endpoint `GET /api/products` para consultar productos y categorias.
+- Endpoint `POST /api/products` preparado para crear nuevos productos.
+- Base de datos relacional con tablas `products` y `categories`.
+- Relacion entre productos y categorias mediante foreign key `category_id`.
+- Consulta con `LEFT JOIN` para mostrar productos aunque no tengan categoria asociada.
+- Manejo de CORS para permitir peticiones desde el frontend desplegado.
+- Scripts SQL de esquema y datos iniciales para crear y poblar la base de datos.
 
 ---
 
@@ -33,21 +40,27 @@ Descripcion breve
 
 | Frontend | Uso |
 | -------- | --- |
-| 1 | 1 |
-| 2 | 2 |
-| 3 | 3 |
+| React | Construccion de la interfaz del inventario. |
+| Vite | Entorno de desarrollo y build del frontend. |
+| JavaScript / JSX | Componentes, estado y renderizado de la tabla. |
+| CSS | Estilos globales de la aplicacion. |
+| Fetch API | Conexion del frontend con el backend desplegado. |
 
 | Backend | Uso |
 | ------- | --- |
-| 1 | 1 |
-| 2 | 2 |
-| 3 | 3 |
+| Next.js | API Routes para exponer el endpoint `/api/products`. |
+| TypeScript | Tipado del backend y definicion de rutas. |
+| Neon | Base de datos PostgreSQL serverless. |
+| Drizzle ORM | Conexion, consultas y definicion del esquema de datos. |
+| PostgreSQL / SQL | Modelo relacional, tablas, inserts y consultas. |
 
 | Auxiliares | Uso |
 | ---------- | --- |
-| 1 | 1 |
-| 2 | 2 |
-| 3 | 3 |
+| Vercel | Despliegue del frontend y backend. |
+| npm | Gestion de dependencias y scripts del proyecto. |
+| ESLint | Revision estatica del codigo en la app Next.js. |
+| Tailwind CSS | Configuracion de estilos incluida en la app Next.js. |
+| Documentacion Markdown | Explicacion de joins, claves foraneas y arquitectura de datos. |
 
 ---
 
